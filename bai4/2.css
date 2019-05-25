@@ -1,0 +1,25 @@
+.noidung {
+  background: gold;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  position: relative; }
+  .noidung:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    background: green;
+    bottom: 0;
+    right: 0; }
+  .noidung a {
+    color: #414141;
+    text-decoration: none;
+    font-family: 'segoe ui light';
+    font-size: 20px; }
+    .noidung a:hover {
+      color: violet; }
+
+/*# sourceMappingURL=2.css.map */

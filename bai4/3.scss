@@ -1,0 +1,17 @@
+$dorongnoidung: 900px;
+$khoangcachcot: 30px;
+.noidung {
+	width: $dorongnoidung;
+	margin: auto;
+	background: lightblue;
+	height: 500px;
+	.cot {
+		background: brown;
+		width: ($dorongnoidung - (2*$khoangcachcot))/3;
+		margin-right: $khoangcachcot;
+		float: left;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

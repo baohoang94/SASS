@@ -1,0 +1,27 @@
+.noidung {
+	background: gold;
+	width: 500px;
+	height: 200px;
+	margin: auto;
+	position: relative;
+	&:after {
+		content: '';
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		z-index: 2;
+		display: block;
+		background: green;
+		bottom: 0;
+		right: 0;
+	}
+	a {
+		color: #414141;
+		text-decoration: none;
+		font-family: 'segoe ui light';
+		font-size: 20px;
+		&:hover {
+			color: violet;
+		}
+	}
+}

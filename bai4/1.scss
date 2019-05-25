@@ -1,0 +1,53 @@
+$mx: #669;
+$mh: #c69;
+@mixin anhcantrai() {
+	float: left;
+	width: 200px;
+	margin-right: 20px;
+}
+@mixin anhcantrai2($mphai) {
+	float: left;
+	width: 200px;
+	margin-right: $mphai;
+}
+@mixin anhcantrai3($rong, $mphai) {
+	float: left;
+	width: $rong;
+	margin-right: $mphai;
+}
+.jumbotron {
+	background-color: $mx;
+	text-align: center;
+	overflow: hidden;
+	h1 {
+		color: $mh;
+		&:hover {
+			color: black;
+		}
+		&:after {
+			content: 'after';
+		}
+		&:before {
+			content: 'before';
+		}
+	}
+	img {
+		@include anhcantrai();
+	}
+	p {
+		font : {
+			size:20px;
+			family: 'tahoma';
+			style: italic;
+		}
+	}
+}
+
+a {
+	color: blue;
+}
+.khac {
+	img {
+		@include anhcantrai3(500px, 50px);
+	}
+}

@@ -1,0 +1,19 @@
+// Phần 1: định nghĩa các đối tượng cơ bản trong web (màu, cỡ chữ, màu chữ);
+// Mau
+$mauxanhdam: #2c3e50;
+$mauchu: #2c3e50;
+$maulogo: #1abc9c;
+// Chu
+$fontchu: 'Lato', sans-serif;
+$cochunho: 13px;
+$cochuvua: 14px;
+$cochumenu: 15px;
+// Các chiều cao và rộng
+$topheight: 50px;
+// Css cho phần top
+.top {
+	height: $topheight;
+	line-height: $topheight;
+	background-color: $mauxanhdam;
+	color: $mauchu;
+}
