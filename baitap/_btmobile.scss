@@ -1,0 +1,22 @@
+@media (max-width: 576px) {
+    .top {
+        height: auto;
+        text-align: center;
+        .top-ngonngu {
+            .cacngonngu {
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+                a {
+                    color: $mauchu;
+                }
+            }
+        }
+    }
+    .menuandlogo {
+        img {
+            width: 100%;
+        }
+    }
+}

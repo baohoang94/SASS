@@ -1,19 +1,168 @@
 // Phần 1: định nghĩa các đối tượng cơ bản trong web (màu, cỡ chữ, màu chữ);
+// Cac anh su dung trong giao dien
+$anhlogo: 'images/logo.png';
 // Mau
 $mauxanhdam: #2c3e50;
-$mauchu: #2c3e50;
+$maunut: #21303f;
 $maulogo: #1abc9c;
+$mauchu: #fff;
+$mauvien: #fff;
+$maunenxam: gray;
 // Chu
 $fontchu: 'Lato', sans-serif;
 $cochunho: 13px;
 $cochuvua: 14px;
 $cochumenu: 15px;
+$cochutieude: 30px;
+$mauchunhat: #a1b1bc;
 // Các chiều cao và rộng
 $topheight: 50px;
+$logoheight: 90px;
+$tieudeheight: 120px;
+// code dung lai
+@mixin reset() {
+	margin: 0;
+	padding: 0;
+}
 // Css cho phần top
+body {
+	font-family: $fontchu;
+	font-size: $cochunho;
+}
 .top {
 	height: $topheight;
 	line-height: $topheight;
 	background-color: $mauxanhdam;
 	color: $mauchu;
+	.top-ngonngu {
+		position: relative;
+		// &:hover {
+		// 	.cacngonngu {
+		// 		visibility: visible;
+		// 		opacity: 1;
+		// 	}
+		// }
+		b {
+			font-size: $cochuvua;
+			cursor: pointer;
+		}
+		.cacngonngu {
+			position: absolute;
+			top: 50px;
+			width: 150px;
+			background-color: $mauxanhdam;
+			// opacity: 0;
+			// transition: .4s;
+			// visibility: hidden;
+			a {
+				display: block;
+				padding: 3px 12px;
+				color: $mauchu;
+				font-size: $cochunho;
+				line-height: 19px;
+				text-align: center;font-weight: normal;
+			}
+		}
+	}
+	// enf top ngon ngu
+	.phai {
+		.nut {
+			display: inline;
+			a.btn {
+				font-size: $cochunho;
+				color: $mauchu;
+				background-color: $maunut;
+				height: 30px;
+				padding: auto 11px;
+				border: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-right: 15px;
+				i {
+					padding-right: 7px;
+				}
+			}
+		}
+		.caclink {
+			display: inline;
+			ul {
+				display: inline;
+				li {
+					display: inline;
+					list-style: none;
+					a {
+						columns: $mauchu;
+						font-size: $cochunho;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
 }
+// Xu ly phan menu va logo
+.menuandlogo {
+	background-color: gray;
+	.navbar {
+		@include reset;
+		.menuphai {
+			height: $logoheight;
+			line-height: $logoheight;
+			li {
+				list-style: none;
+			}
+			a {
+				@include reset;
+				color: $mauxanhdam;
+				font-size: $cochumenu;
+				padding-right: 26px;
+				padding-left: 26px;
+				font-weight: 900;
+				text-transform: uppercase;
+			}
+			.timkiem {
+				float: right;
+			}
+		}
+		
+	}
+}
+.tieude {
+	height: $tieudeheight;
+	line-height: $tieudeheight;
+	font-size: $cochutieude;
+	color: $mauxanhdam;
+	a {
+
+	}
+	.trai {
+		h2 {
+			a {
+				background-color: #fff;
+				border: 1px solid $mauvien;
+				border-radius: 3px;
+				display: inline-block;
+				padding: 5px;
+				height: 30px;
+				width: 30px;
+				color: $mauchunhat;
+			}
+		}
+	}
+	.phai {
+		.breadcrumb {
+			line-height: 20px;
+			font-size: $cochunho;
+			.breadcrumb-item {
+				&:first-child:before {
+					content: '';
+				}
+				&::before {
+					font: normal normal normal 14px/1 FontAwesome;
+					content: "\f105";
+				}
+			}
+		}
+	}
+}
+@import 'btmobile';
